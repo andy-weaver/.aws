@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Get git, curl
+sudo yum install git curl
+
+# install install_dotfiles
+sudo cp install_dotfiles /usr/bin/install_dotfiles
+sudo +x /usr/bin/install_dotfiles
+
+# copy nvim config
+cp -r .config ~/.config
+
+# extract nvim to /usr/bin
+tar -xzf nvim-linux64.tar.gz /usr/bin/
